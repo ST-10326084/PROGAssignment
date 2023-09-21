@@ -3,6 +3,8 @@ import java.util.Scanner;
 // All information sourced from Joyce Farrel,202, Java Programming Cengage 9th Edition
 // and Bro Code, 2020, Java Full Course for Free, Youtube (https://www.youtube.com/watch?v=xk4_1vDrzzo)
 
+// child class 
+// contains all working methods
 public class Player extends GameEntity {
     public Player(String[][] maze, int startRow, int startCol) {
         super(maze, startRow, startCol);
@@ -16,6 +18,7 @@ public class Player extends GameEntity {
         return playerCol;
     }
 
+    // method to allow player movement up, down, left and right
     public void movement(String move) {
         Scanner scanner = new Scanner(System.in);
         
