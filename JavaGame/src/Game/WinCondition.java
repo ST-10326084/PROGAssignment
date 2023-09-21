@@ -2,6 +2,7 @@ package Game;
 // All information sourced from Joyce Farrel,202, Java Programming Cengage 9th Edition
 // and Bro Code, 2020, Java Full Course for Free, Youtube (https://www.youtube.com/watch?v=xk4_1vDrzzo)
 
+// child class
 public class WinCondition extends GameEntity {
     private boolean gameWon;
 
@@ -22,6 +23,7 @@ public class WinCondition extends GameEntity {
         }
     }
 
+    // used to display the maze
     public void printMaze() {
     for (int i = 0; i < maze.length; i++) {
         for (int j = 0; j < maze[i].length; j++) {
