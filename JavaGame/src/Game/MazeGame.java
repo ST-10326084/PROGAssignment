@@ -9,6 +9,7 @@ public class MazeGame {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        // maze 1 
         String[][] mazeLevel1= {
              {"#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#"},
             {"#", " ", " ", " ", "#", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "#"},
@@ -18,7 +19,7 @@ public class MazeGame {
             {"#", " ", " ", " ", " ", " ", " ", " ", " ", "#", " ", " ", "#", " ", " ", " ", "#"},
             {"#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "E", "#"},
         };
-
+        // maze 2
         String[][] mazeLevel2 = {
             {"#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#"},
             {"#", " ", "#", " ", "#", " ", " ", " ", "#", " ", " ", " ", " ", " ", " ", " ", "#"}, 
@@ -36,9 +37,9 @@ public class MazeGame {
             {"#", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "#", " ", " ", " ", "#"},
             {"#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#"},
         };
-
+        // default level
         int currentLevel = 1;
-
+        // while loop for menu
         while (true) {
 
             System.out.println("Maze Game");
@@ -63,7 +64,7 @@ public class MazeGame {
             }
         }
 
-        scanner.close(); // Close the scanner
+        scanner.close(); // 
     }
 
     public static void playMazeGame(String[][] maze, int currentLevel) {
@@ -72,7 +73,7 @@ public class MazeGame {
         int exitCol = findExitCol(maze);
 
         while (true) {
-            // Clear the console to display the updated maze
+            // Clear the console
             System.out.print("\033[H\033[2J");
             System.out.flush();
 
@@ -84,9 +85,9 @@ public class MazeGame {
                     } else {
                         System.out.print(maze[i][j]);
                     }
-                    System.out.print(' '); // Add a space to separate each cell for better visualization
+                    System.out.print(' '); 
                 }
-                System.out.println(); // Move to the next row
+                System.out.println(); 
             }
 
             player.movement("w");
@@ -102,7 +103,7 @@ public class MazeGame {
             }
         }
     }
-
+    // used to locate where the exit is
     public static int findExitRow(String[][] maze) {
         for (int i = 0; i < maze.length; i++) {
             for (int j = 0; j < maze[i].length; j++) {
@@ -113,7 +114,7 @@ public class MazeGame {
         }
         return -1; // Return -1 if no exit is found
     }
-
+    // used to locate where the exit is
     public static int findExitCol(String[][] maze) {
         for (int i = 0; i < maze.length; i++) {
             for (int j = 0; j < maze[i].length; j++) {
