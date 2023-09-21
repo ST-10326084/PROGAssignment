@@ -3,9 +3,11 @@ import java.util.*;
 // All information sourced from Joyce Farrel,202, Java Programming Cengage 9th Edition
 // and Bro Code, 2020, Java Full Course for Free, Youtube (https://www.youtube.com/watch?v=xk4_1vDrzzo)
 
+// menu class is responsible for holding the 2 menu's the app has
 public class Menu {
     public static Scanner input = new Scanner(System.in);
-    
+
+    // this is the first menu users will see allowing them to enter to exit the program
     public static void introMenu() {
         System.out.println("STUDENT MANAGEMENT APPLICATION");
         System.out.println("*************************************");
@@ -24,7 +26,7 @@ public class Menu {
             input.nextLine();
         }
     }
-
+    // this menu is persistant and pops up after every single action to allow the user to see different parts of the program
     public static void mainMenu() {
     boolean exitFlag = false;
 
