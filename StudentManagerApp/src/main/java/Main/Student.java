@@ -5,19 +5,23 @@ import java.util.*;
 // All information sourced from Joyce Farrel,202, Java Programming Cengage 9th Edition
 // and Bro Code, 2020, Java Full Course for Free, Youtube (https://www.youtube.com/watch?v=xk4_1vDrzzo)
 
+
 public class Student {
     public static Scanner input = new Scanner(System.in);          
     static List<Student> students = new ArrayList<>();
 
+    // added so unit tests are easier 
     static Object getStudents() {
         students.get(1);
         return students;
     }
-    
+
+    // added so unit tests are easier 
      public int getStudentId() {
         return studentID;
     }
     
+    // added so unit tests are easier 
     public static Student getStudentById(int studentId) {
         for (Student student : students) {
             if (student.getStudentId() == studentId) {
@@ -69,7 +73,8 @@ public class Student {
     public boolean getStudentSaved() {
         return studentSaved;
     }
-    
+
+    // save student method adds students to memory 
     public static void SaveStudent() {
         
         System.out.println("Capture a new Student");
@@ -125,7 +130,7 @@ public class Student {
         }
     }
 
-
+    // search for students by ID rather than index 
     public static void SearchStudent() {
         System.out.println("Enter the student ID to search for them:");
 
@@ -149,6 +154,7 @@ public class Student {
         }
     }
 
+    // method to delete students 
     public static void DeleteStudent(int studentIDToDelete) { 
         System.out.println("Enter the student ID to delete:");
         studentIDToDelete = input.nextInt();
@@ -161,6 +167,7 @@ public class Student {
                 System.out.println("Are you sure you want to delete this student? (y/n)");
                 String confirmation = input.nextLine();
 
+                // confirmation code
                 if (confirmation.equalsIgnoreCase("y") || confirmation.equalsIgnoreCase("yes")) {
                     students.remove(student);
                     System.out.println("Student with ID " + studentIDToDelete + " has been deleted.");
@@ -180,6 +187,7 @@ public class Student {
         }
     }
 
+    // display for students
     public static void StudentReport() {
         System.out.println("Student Information for All Students:");
         System.out.println("*************************************");
@@ -206,6 +214,7 @@ public class Student {
         }
     
 
+    // exit app
     public static void ExitStudentApplication() {
         System.out.println("Exiting the program");
         System.exit(0);
